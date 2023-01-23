@@ -3,7 +3,7 @@ import os
 import requests
 
 
-WEBHOOK_URL = os.environ["WEBHOOK_URL"]
+WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK")
 
 
 class DiscordWebhook:
