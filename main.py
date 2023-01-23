@@ -1,4 +1,5 @@
 import time
+import logging
 
 from pathlib import Path
 
@@ -12,16 +13,16 @@ logs = Path("logs")
 
 @app.route('/', methods=['POST'])
 def plex_webhook():
-    print(request)
-    print(request.json)
-    print(request.form)
-    print(request.data)
-    print(request.get_data())
-    print(request.get_json())
-    print(request.get_json(force=True))
-    print(request.get_json(silent=True))
-    print(request.get_json(cache=True))
-    print(request.get_json(force=True, silent=True, cache=True))
+    logging.warning(request)
+    logging.warning(request.json)
+    logging.warning(request.form)
+    logging.warning(request.data)
+    logging.warning(request.get_data())
+    logging.warning(request.get_json())
+    logging.warning(request.get_json(force=True))
+    logging.warning(request.get_json(silent=True))
+    logging.warning(request.get_json(cache=True))
+    logging.warning(request.get_json(force=True, silent=True, cache=True))
 
     data = request.json
     logs.joinpath(f"{time.time()}.json").write_text(str(data))
