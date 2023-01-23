@@ -12,7 +12,7 @@ logs = Path("logs")
 
 @app.route('/', methods=['POST'])
 def plex_webhook():
-    data = request.get_json()
+    data = request.get_json(force=True)
     logs.joinpath(f"{time.time()}.json").write_text(str(data))
     embed = parse_plex_json(data)
     embed.send()
