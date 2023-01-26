@@ -12,7 +12,7 @@ class BaseEmbed(DiscordWebhookEmbed):
             title = msg.get("Metadata").get("grandparentTitle")
 
             if msg.get("Metadata").get("index") and msg.get("Metadata").get("parentIndex"):
-                title += f" S{msg.get('Metadata').get('parentIndex')}E{msg.get('Metadata').get('index')}"
+                title += f" S{msg.get('Metadata').get('parentIndex')}E{msg.get('Metadata').get('index')} - {msg.get('Metadata').get('title')}"
 
         else:
             title = msg.get("Metadata").get("title")
