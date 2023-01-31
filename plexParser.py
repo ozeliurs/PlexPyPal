@@ -1,4 +1,5 @@
-from discordWebhook.webhooks import LibraryOnDeck, LibraryNew, MediaPause, MediaPlay, MediaRate, MediaResume, MediaScrobble, MediaStop, AdminDatabaseBackup, AdminDatabaseCorruption, DeviceNew, PlaybackStarted, UnknownEvent
+from discordWebhook.webhooks import LibraryOnDeck, LibraryNew, MediaPause, MediaPlay, MediaRate, MediaResume, \
+    MediaScrobble, MediaStop, AdminDatabaseBackup, AdminDatabaseCorruption, DeviceNew, PlaybackStarted, UnknownEvent
 
 
 def parse_plex_json(msg: dict):

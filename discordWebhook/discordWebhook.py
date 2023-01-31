@@ -2,7 +2,6 @@ import os
 
 import requests
 
-
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK")
 
 
